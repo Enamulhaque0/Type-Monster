@@ -9,7 +9,7 @@ const modalBackground = document.getElementById("modal-background");
 let userText = "";
 let errorCount = 0;
 
-let startTime ;
+let startTime;
 let questionText = "";
 
 // Load and display question
@@ -44,10 +44,14 @@ const typeController = (e) => {
   const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
-    display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
+    display.innerHTML += `<span class="green">${
+      newLetter === " " ? "▪" : newLetter
+    }</span>`;
   } else {
     errorCount++;
-    display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    display.innerHTML += `<span class="red">${
+      newLetter === " " ? "▪" : newLetter
+    }</span>`;
   }
 
   // check if given question text is equal to user typed text
@@ -92,7 +96,7 @@ const gameOver = () => {
   // restart everything
   startTime = null;
   errorCount = 0;
-  
+
   userText = "";
   display.classList.add("inactive");
 };
@@ -114,7 +118,6 @@ const start = () => {
 
     // finished timer
     if (count == 0) {
-     
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
@@ -137,10 +140,8 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
-  
 
-
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent.toFixed(0) : 0} seconds`;
-  
-  
+  document.getElementById("show-time").innerHTML = `${
+    startTime ? timeSpent.toFixed(0) : 0
+  } seconds`;
 }, 1000);

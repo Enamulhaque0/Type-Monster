@@ -83,7 +83,7 @@ body {
 }
 #result {
   position: fixed;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
@@ -95,7 +95,7 @@ body {
   text-align: center;
   padding: 2rem;
 }
-#show-time{
+#show-time {
   text-align: center;
   color: white;
   margin: 10px 0;
@@ -201,7 +201,9 @@ button {
   top: 0;
 }
 
-/* Article Page Styles  */
+/*============================================
+                   ARTICLES PART
+============================================*/
 
 #articles article {
   color: white;
@@ -226,7 +228,9 @@ button {
   color: #9dffad;
 }
 
-
+/*============================================
+                   RESPONSIVE PART
+============================================*/
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
@@ -235,23 +239,21 @@ button {
   .card {
     flex-direction: column;
     text-align: center;
-    
-    
+  }
+
+  #blog {
+    right: 20px;
   }
 }
 
-
-@media (min-width: 992px) and (max-width : 1400px){
-  
-  #histories{
+@media (min-width: 992px) {
+  #histories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-
   }
   .card {
     flex-direction: column;
     text-align: center;
-    
   }
 }
