@@ -190,3 +190,19 @@ button {
     flex-direction: column;
   }
 }
+
+
+@media (min-width: 992px) and (max-width : 1400px){
+  
+  #histories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+  }
+  .card {
+    flex-direction: column;
+    text-align: center;
+    
+  }
+}
