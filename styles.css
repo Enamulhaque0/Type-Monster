@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#blog {
+  position: absolute;
+  color: white;
+  right: 225px;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
 body {
   background-image: url("./bg.png");
   background-size: cover;
@@ -14,6 +33,7 @@ body {
 .box-container {
   width: 70%;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 #question {
@@ -181,6 +201,32 @@ button {
   top: 0;
 }
 
+/* Article Page Styles  */
+
+#articles article {
+  color: white;
+  border: 1px solid #9dffad;
+  border-radius: 5px;
+  padding: 15px 10px;
+  margin-bottom: 15px;
+}
+
+#articles article h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+#articles article p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+#articles article b {
+  color: #9dffad;
+}
+
+
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
@@ -188,6 +234,9 @@ button {
   }
   .card {
     flex-direction: column;
+    text-align: center;
+    
+    
   }
 }
 
